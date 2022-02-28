@@ -2,45 +2,43 @@
 ## Overview of the Analysis
 The purpose of this project is to create a binary classifier utilizing machine learning.  The outcome will tell us if it is capable of predicting whether applicants will be successful if funded by Alphabet Soup. Using The Tensorflow Library and the Keras Model we will build a Neural network and attempt to train the network with the given metadata.
 
-## Results 
+## Results
 
-### Data Preprocessing 
+#### Data Preprocessing
+##### The successful target variable for this analysis and model is the IS_SUCCESSFUL field.
 
-#### 1.) What variable(s) are considered the target(s) for your model?
+### The following variable(s) should be considered on features model
 
-IS_SUCCESSFUL is a target for my model. Because the purposer of the analysis is to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup. 
+* ORGANIZATION
+* STATUS
+* INCOME_AMT
+* SPECIAL_CONSIDERATIONS
+* ASK_AMT
+* APPLICATION_TYPE
+* AFFILIATION
+* CLASSIFICATION
+* USE_CASE
 
-#### 1.) What variable(s) are considered to be the features for your model?
+### The following variable(s) should be removed from input and data.
 
-  - APPLICATION_TYPE
-  - AFFILIATION 
-  - CLASSIFICATION
-  - USE_CASE
-  - ORGANIZATION
-  - STATUS
-  - INCOME_AMT,
-  - SPECIAL_CONSIDERATIONS
-  - ASK_AMT
-
-#### 2.) What variable(s) are neither targets nor features, and should be removed from the input data?
-  - EIN
-  - NAME
-
-### Compiling, Training, and Evaluating the Model
+* NAME
+* EIN
 
 #### 3.) How many neurons, layers, and activation functions did you select for your neural network model, and why?
 
-  ![image](https://user-images.githubusercontent.com/88631769/148705050-5284735d-2753-4a08-97aa-76bf616708c5.png)
+![image](https://user-images.githubusercontent.com/87340105/155933040-fb275621-fecf-4278-a890-692c13eba275.png)
 
- 
 #### 4.) Were you able to achieve the target model performance?
 
-  No, the highest accuracy I could achieve is 73%. 
+Unfortunately, I was not able to opptimize the model to achieve the predicted accuracy of 75%. The model maxed at 73% 
+
+![image](https://user-images.githubusercontent.com/87340105/155932917-6c97d313-814c-460b-81d5-9d52d4a19cfb.png)
+
   
 #### 5.) What steps did you take to try and increase model performance? 
   
-  Adding more hidden layers and changing the activation function for the hidden layers. 
+Added more hidden layers, dropped columns, additional neurons added
   
 ### Summary 
 
-The deep learning neural network model did not reach the target of 75% accuracy after 3 attemps. The highest result we could get is 73%. To achieve a higher accuracy, more data needs to be acquired. In a binary classification, we could use a supervised machine learning model to combine numerous decision trees. 
+Overall the neural network model did well with at least a 73% accuracy rate. I would recommend using the Random Forest classifier. The output and feature selection of this model are easy to understand. The data in this analysis is not to complex to need a deep learning model. 
